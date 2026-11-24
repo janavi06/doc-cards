@@ -171,21 +171,6 @@ function rowHTML(d) {
    </div>
 
    <div class="col">
-     <table class="t kv"><tbody>
-       <tr><th>Hospital</th><td>${dash(d.hospital)}</td></tr>
-       <tr><th>Exp</th><td>${d.expText ? esc(d.expText) + " Yrs" : dash("")}</td></tr>
-     </tbody></table>
-     <div class="table-scroll branches-scroll" aria-label="Working locations; scroll for more than four branches">
-       <table class="t branches">
-         <colgroup><col style="width:17%"><col style="width:16%"><col style="width:19%"><col style="width:15%"><col style="width:17%"><col style="width:16%"></colgroup>
-         <thead><tr><th>Department</th><th>Designation</th><th>Branch</th><th>City</th><th>Area</th><th>Profile</th></tr></thead>
-         <tbody>${brRows}</tbody>
-       </table>
-     </div>
-     ${source || sourceLink ? `<div class="source-line">${source}${sourceLink}</div>` : ""}
-   </div>
-
-   <div class="col">
      <div class="table-scroll education-scroll" aria-label="Education; scroll for more than four qualifications">
        <table class="t edu">
          <colgroup><col style="width:38%"><col style="width:42%"><col style="width:20%"></colgroup>
@@ -203,6 +188,21 @@ function rowHTML(d) {
        </div>
      </div>
    </div>
+   <div class="col">
+     <table class="t kv"><tbody>
+       <tr><th>Hospital</th><td>${dash(d.hospital)}</td></tr>
+       <tr><th>Exp</th><td>${d.expText ? esc(d.expText) + " Yrs" : dash("")}</td></tr>
+     </tbody></table>
+     <div class="table-scroll branches-scroll" aria-label="Working locations; scroll for more than four branches">
+       <table class="t branches">
+         <colgroup><col style="width:17%"><col style="width:16%"><col style="width:19%"><col style="width:15%"><col style="width:17%"><col style="width:16%"></colgroup>
+         <thead><tr><th>Department</th><th>Designation</th><th>Branch</th><th>City</th><th>Area</th><th>Profile</th></tr></thead>
+         <tbody>${brRows}</tbody>
+       </table>
+     </div>
+     ${source || sourceLink ? `<div class="source-line">${source}${sourceLink}</div>` : ""}
+   </div>
+
   </article>`;
 }
 function render() {

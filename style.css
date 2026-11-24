@@ -11,7 +11,7 @@
   --line: #e2e8f0;
   --ink: #0f172a;
   --muted: #64748b;
-  --cols: 160px minmax(0, 3.2fr) minmax(0, 1.6fr);
+  --cols: 160px minmax(0, 1fr) minmax(0, 1fr);
 }
 
 *, *::before, *::after {
@@ -602,7 +602,7 @@ h1 {
 /* Responsive */
 @media (max-width: 1280px) {
   :root {
-    --cols: 145px minmax(0, 2.6fr) minmax(0, 1.5fr);
+    --cols: 145px minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 
