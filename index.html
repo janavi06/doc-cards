@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2457c5">
+<meta name="description" content="Search doctors by specialty, city, hospital, experience and qualifications.">
+<title>Find a Doctor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <section class="search-panel" aria-label="Search and filter doctors">
+    <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="q" class="search" type="search" placeholder="Name, specialty, hospital, degree or location…" autocomplete="off" aria-label="Search doctors"></label>
+    <div class="filters">
+      <select id="f-city" aria-label="City"></select>
+      <select id="f-department" aria-label="Department"></select>
+      <select id="f-experience" aria-label="Experience"></select>
+      <select id="f-hospital" aria-label="Hospital"></select>
+      <select id="f-area" aria-label="Area"></select>
+      <button id="reset" class="ghost" type="button">Reset filters</button>
+    </div>
+  </section>
+  <div id="banner" class="banner" hidden></div>
+  <div class="gridhead" id="gridhead">
+    <div><b>Name</b></div>
+    <div><b>Working details</b></div>
+    <div><b>Educational qualification</b></div>
+  </div>
+  <main id="rows" aria-live="polite"></main>
+  <footer class="foot"><nav id="pager" class="pager"></nav><label class="per">Per page <select id="page-size"><option>25</option><option>50</option><option>100</option></select></label></footer>
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
